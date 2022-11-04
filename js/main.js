@@ -20,19 +20,19 @@ tabsArrey.forEach((ele) => {
   });
 });
 
-let user = document.getElementById("user");
-let number = document.getElementById("number");
-let adress = document.getElementById("adress");
+// let user = document.getElementById("user");
+// let number = document.getElementById("number");
+// let adress = document.getElementById("adress");
 
-let submit = document.getElementById("submit")
+// let submit = document.getElementById("submit")
 
-function getTotal() {
-    submit.href = `https://api.whatsapp.com/send?phone=201028965962&text=الإسم+${user.value.trim()}++التليفون+${number.value.trim()}++العنوان+${adress.value.trim()}`;
-}
+// function getTotal() {
+//     submit.href = `https://api.whatsapp.com/send?phone=201028965962&text=الإسم+${user.value.trim()}++التليفون+${number.value.trim()}++العنوان+${adress.value.trim()}`;
+// }
 
-submit.onclick = function () {
-    console.log("bb")
-    if (user.value == " ") {
-        submit.href=""
-    }
-}
+// submit.onclick = function () {
+//     console.log("bb")
+//     if (user.value == " ") {
+//         submit.href=""
+//     }
+// }
