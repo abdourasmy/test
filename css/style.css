@@ -1,8 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+::selection {
+  background-color: rgb(251, 33, 117);
+  color: #fff;
+}
+
 body {
   font-family: "Noto Kufi Arabic", sans-serif !important;
 }
-a {
+* {
   text-decoration: none !important;
 }
 header {
@@ -19,6 +25,7 @@ header {
 }
 .icon {
   height: 65px;
+  border-radius: 50px;
 }
 ::-webkit-scrollbar {
   width: 8px;
@@ -97,6 +104,27 @@ header {
     inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
     inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
 }
+@keyframes shiny-btn1 {
+  0% {
+    -webkit-transform: scale(0) rotate(45deg);
+    opacity: 0;
+  }
+
+  80% {
+    -webkit-transform: scale(0) rotate(45deg);
+    opacity: 0.5;
+  }
+
+  81% {
+    -webkit-transform: scale(4) rotate(45deg);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: scale(50) rotate(45deg);
+    opacity: 0;
+  }
+}
 .contact {
   -webkit-box-shadow: 0px 1px 0px 0 rgb(0 0 0 / 22%);
   box-shadow: 0px 1px 0px 0 rgb(0 0 0 / 22%);
@@ -111,6 +139,7 @@ header {
     height: 50vh;
     margin: 0 !important;
   }
+  
 }
 h3 {
   margin: 30px !important;
@@ -141,7 +170,6 @@ li {
 }
 .tabs li {
   padding: 3px;
-  /* background-color: #f6f4f4; */
   border-right: 1px solid white;
   cursor: pointer;
   user-select: none;
@@ -151,16 +179,6 @@ li {
   -ms-transition: 0.2s;
   -o-transition: 0.2s;
 }
-/* .tabs li:hover,
-  .tabs li.active {
-    background-color: #ddd;
-  }
-  .contact {
-    background-color: #ddd;
-  } */
-/* .contact > div {
-    padding: 20px;
-  } */
 .contact1 > div:not(:first-child) {
   display: none;
 }
@@ -187,6 +205,36 @@ video {
   video {
     width: 50% !important ;
   }
+
 }
-/* @media (max-width: 613px) {
-} */
+.container {
+  -webkit-box-shadow: 0px 1px 0px 0 rgb(0 0 0 / 22%);
+  box-shadow: 0px 1px 0px 0 rgb(0 0 0 / 22%);
+}
+.invoice {
+  margin: 20px 0;
+}
+abbr {
+  color: red;
+}
+label {
+  line-height: 2;
+  font-weight: 700;
+  font-size: 13.5px;
+  font-size: 0.9rem;
+}
+input {
+  padding: 3px;
+  margin: 0 0 6px !important;
+  width: 50%;
+}
+form {
+  text-align: start;
+}
+select {
+  width: 50%;
+}
+textarea {
+  width: 50%;
+  height: 90px;
+}
