@@ -13,26 +13,36 @@ tabsArrey.forEach((ele) => {
     e.currentTarget.classList.add("active");
     // this.className = "active"
     divsArrey.forEach((div) => {
-      div.style.display = "none"
+      div.style.display = "none";
     });
-    console.log(e.currentTarget.dataset.cont)
-    document.querySelector(e.currentTarget.dataset.cont).style.display = "block"
+    console.log(e.currentTarget.dataset.cont);
+    document.querySelector(e.currentTarget.dataset.cont).style.display =
+      "block";
   });
 });
 
-// let user = document.getElementById("user");
-// let number = document.getElementById("number");
-// let adress = document.getElementById("adress");
+let user = document.getElementById("user");
+let number = document.getElementById("number");
+let adress = document.getElementById("adress");
+let select = document.getElementById("select");
 
-// let submit = document.getElementById("submit")
+let textarea = document.getElementById("textarea")
 
-// function getTotal() {
-//     submit.href = `https://api.whatsapp.com/send?phone=201028965962&text=الإسم+${user.value.trim()}++التليفون+${number.value.trim()}++العنوان+${adress.value.trim()}`;
-// }
+let submit = document.getElementById("submit");
+let test;
 
-// submit.onclick = function () {
-//     console.log("bb")
-//     if (user.value == " ") {
-//         submit.href=""
-//     }
-// }
+function getTotal() {
+  if (textarea.value.trim() != "") {
+    test = textarea.value.trim()
+  } else {
+    test = "لا يوجد"
+  }
+  submit.href = `https://api.whatsapp.com/send?phone=201028965962&text=الإسم+${user.value.trim()}++التليفون+${number.value.trim()}++محاظه+${select.options[select.selectedIndex].value}++العنوان+${adress.value.trim()}++ ملاحظه ${test}`;
+  console.log(select.options[select.selectedIndex].value)
+}
+submit.onclick = function () {
+  console.log("bb");
+  if (user.value == " ") {
+    submit.href = "";
+  }
+};
